@@ -1,0 +1,48 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.7.2": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.7.2": []
+  },
+  "packageFolders": {
+    "/Users/damianstachowicz/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/damianstachowicz/Documents/Programowanie/Godot/Super-Cool-Breakout-Clone/Super-Cool-Breakout-Clone.csproj",
+      "projectName": "Super-Cool-Breakout-Clone",
+      "projectPath": "/Users/damianstachowicz/Documents/Programowanie/Godot/Super-Cool-Breakout-Clone/Super-Cool-Breakout-Clone.csproj",
+      "packagesPath": "/Users/damianstachowicz/.nuget/packages/",
+      "outputPath": "/Users/damianstachowicz/Documents/Programowanie/Godot/Super-Cool-Breakout-Clone/.mono/temp/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/damianstachowicz/.config/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net472"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net472": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net472": {
+        "runtimeIdentifierGraphPath": "/Library/Frameworks/Mono.framework/Versions/6.12.0/lib/mono/msbuild/Current/bin/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

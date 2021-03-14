@@ -1,0 +1,8 @@
+/Users/damianstachowicz/Documents/Programowanie/Godot/Super-Cool-Breakout-Clone/.mono/temp/bin/Debug/Super-Cool-Breakout-Clone.dll
+/Users/damianstachowicz/Documents/Programowanie/Godot/Super-Cool-Breakout-Clone/.mono/temp/bin/Debug/Super-Cool-Breakout-Clone.pdb
+/Users/damianstachowicz/Documents/Programowanie/Godot/Super-Cool-Breakout-Clone/.mono/temp/obj/Debug/Super-Cool-Breakout-Clone.csprojAssemblyReference.cache
+/Users/damianstachowicz/Documents/Programowanie/Godot/Super-Cool-Breakout-Clone/.mono/temp/obj/Debug/Super-Cool-Breakout-Clone.AssemblyInfoInputs.cache
+/Users/damianstachowicz/Documents/Programowanie/Godot/Super-Cool-Breakout-Clone/.mono/temp/obj/Debug/Super-Cool-Breakout-Clone.AssemblyInfo.cs
+/Users/damianstachowicz/Documents/Programowanie/Godot/Super-Cool-Breakout-Clone/.mono/temp/obj/Debug/Super-Cool-Breakout-Clone.csproj.CoreCompileInputs.cache
+/Users/damianstachowicz/Documents/Programowanie/Godot/Super-Cool-Breakout-Clone/.mono/temp/obj/Debug/Super-Cool-Breakout-Clone.dll
+/Users/damianstachowicz/Documents/Programowanie/Godot/Super-Cool-Breakout-Clone/.mono/temp/obj/Debug/Super-Cool-Breakout-Clone.pdb

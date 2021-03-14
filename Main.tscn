@@ -1,0 +1,190 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Ball.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Block.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Paddle.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/bg/IMG_20200618_100133.jpg" type="Texture" id=4]
+
+[sub_resource type="SegmentShape2D" id=1]
+b = Vector2( 1334, 0 )
+
+[sub_resource type="SegmentShape2D" id=2]
+b = Vector2( 0, 750 )
+
+[sub_resource type="SegmentShape2D" id=3]
+a = Vector2( 1334, 0 )
+b = Vector2( 1334, 750 )
+
+[node name="Main" type="Node"]
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 668, 376 )
+scale = Vector2( 0.334, 0.334222 )
+texture = ExtResource( 4 )
+
+[node name="Ball" parent="." instance=ExtResource( 1 )]
+position = Vector2( 692.264, 675.928 )
+startUpSpeed = Vector2( -200, -200 )
+
+[node name="Block" parent="." instance=ExtResource( 2 )]
+position = Vector2( 32, 560 )
+
+[node name="Block2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 128, 464 )
+durability = 0
+
+[node name="Block3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 192, 464 )
+
+[node name="Block4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 128, 496 )
+
+[node name="Block7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 96, 528 )
+
+[node name="Block8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 192, 496 )
+
+[node name="Block9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 232, 400 )
+durability = 4
+
+[node name="Block10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 296, 400 )
+durability = 4
+
+[node name="Block11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 232, 432 )
+
+[node name="Block12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 296, 432 )
+
+[node name="Block13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 256, 464 )
+durability = 0
+
+[node name="Block14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 320, 464 )
+
+[node name="Block15" parent="." instance=ExtResource( 2 )]
+position = Vector2( 256, 496 )
+
+[node name="Block16" parent="." instance=ExtResource( 2 )]
+position = Vector2( 320, 496 )
+
+[node name="Block17" parent="." instance=ExtResource( 2 )]
+position = Vector2( 256, 464 )
+durability = 0
+
+[node name="Block18" parent="." instance=ExtResource( 2 )]
+position = Vector2( 320, 464 )
+
+[node name="Block19" parent="." instance=ExtResource( 2 )]
+position = Vector2( 256, 496 )
+
+[node name="Block20" parent="." instance=ExtResource( 2 )]
+position = Vector2( 320, 496 )
+
+[node name="Block21" parent="." instance=ExtResource( 2 )]
+position = Vector2( 256, 464 )
+durability = 0
+
+[node name="Block22" parent="." instance=ExtResource( 2 )]
+position = Vector2( 320, 464 )
+
+[node name="Block23" parent="." instance=ExtResource( 2 )]
+position = Vector2( 256, 496 )
+
+[node name="Block24" parent="." instance=ExtResource( 2 )]
+position = Vector2( 320, 496 )
+
+[node name="Block25" parent="." instance=ExtResource( 2 )]
+position = Vector2( 224, 528 )
+durability = 0
+
+[node name="Block26" parent="." instance=ExtResource( 2 )]
+position = Vector2( 288, 528 )
+
+[node name="Block27" parent="." instance=ExtResource( 2 )]
+position = Vector2( 224, 560 )
+
+[node name="Block28" parent="." instance=ExtResource( 2 )]
+position = Vector2( 288, 560 )
+
+[node name="Block29" parent="." instance=ExtResource( 2 )]
+position = Vector2( 352, 528 )
+durability = 0
+
+[node name="Block30" parent="." instance=ExtResource( 2 )]
+position = Vector2( 416, 528 )
+
+[node name="Block31" parent="." instance=ExtResource( 2 )]
+position = Vector2( 352, 560 )
+
+[node name="Block32" parent="." instance=ExtResource( 2 )]
+position = Vector2( 416, 560 )
+
+[node name="Block33" parent="." instance=ExtResource( 2 )]
+position = Vector2( 360, 400 )
+durability = 4
+
+[node name="Block34" parent="." instance=ExtResource( 2 )]
+position = Vector2( 424, 400 )
+durability = 4
+
+[node name="Block35" parent="." instance=ExtResource( 2 )]
+position = Vector2( 360, 432 )
+
+[node name="Block36" parent="." instance=ExtResource( 2 )]
+position = Vector2( 424, 432 )
+
+[node name="Block37" parent="." instance=ExtResource( 2 )]
+position = Vector2( 384, 464 )
+durability = 0
+
+[node name="Block38" parent="." instance=ExtResource( 2 )]
+position = Vector2( 448, 464 )
+
+[node name="Block39" parent="." instance=ExtResource( 2 )]
+position = Vector2( 384, 496 )
+
+[node name="Block40" parent="." instance=ExtResource( 2 )]
+position = Vector2( 448, 496 )
+
+[node name="Block41" parent="." instance=ExtResource( 2 )]
+position = Vector2( 488, 400 )
+durability = 4
+
+[node name="Block42" parent="." instance=ExtResource( 2 )]
+position = Vector2( 552, 400 )
+durability = 4
+
+[node name="Block43" parent="." instance=ExtResource( 2 )]
+position = Vector2( 488, 432 )
+
+[node name="Block44" parent="." instance=ExtResource( 2 )]
+position = Vector2( 552, 432 )
+
+[node name="Block5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 64, 496 )
+
+[node name="Block6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 32, 528 )
+
+[node name="Wall" type="KinematicBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+shape = SubResource( 1 )
+
+[node name="Wall2" type="KinematicBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
+shape = SubResource( 2 )
+
+[node name="Wall3" type="KinematicBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3"]
+shape = SubResource( 3 )
+
+[node name="Node2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( 640, 736 )
