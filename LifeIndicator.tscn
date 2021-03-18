@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/imgs/tile_0374.png" type="Texture" id=1]
+[ext_resource path="res://assets/imgs/tile_0375.png" type="Texture" id=2]
+[ext_resource path="res://assets/imgs/tile_0373.png" type="Texture" id=3]
+[ext_resource path="res://LifeIndicator.cs" type="Script" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Empty",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "Half",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Full",
+"speed": 5.0
+} ]
+
+[node name="LifeIndicator" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Heart1" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "Full"
+
+[node name="Heart2" type="AnimatedSprite" parent="."]
+position = Vector2( 20, 0 )
+frames = SubResource( 1 )
+animation = "Full"
+
+[node name="Heart3" type="AnimatedSprite" parent="."]
+position = Vector2( 40, 0 )
+frames = SubResource( 1 )
+animation = "Full"
