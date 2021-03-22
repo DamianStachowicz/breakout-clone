@@ -6,6 +6,9 @@ public class LifeIndicator : Node2D
     private byte lives = 6;
     private AnimatedSprite[] heartSprites;
 
+    [Signal]
+    public delegate void EndGame();
+
     public override void _Ready() {
         heartSprites = new AnimatedSprite[lives / 2];
         for (uint i = 0; i < lives / 2; i++) {
@@ -20,5 +23,11 @@ public class LifeIndicator : Node2D
             heartSprites[lives / 2].Play("Empty");
         }
         lives--;
+
+        if (lives == 0) {
+            GetTree().Paused = true;
+            EmitSignal(nameof(EndGame));
+            ((Node2D)GetParent().GetNode("GameOverScreen")).Show();
+        }
     }
 }
