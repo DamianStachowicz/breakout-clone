@@ -3,7 +3,6 @@ using System;
 
 public class Block : StaticBody2D
 {
-    [Export] Boolean wall = false;
     [Export] byte durability = 1;
     [Export] UInt32 points = 10;
 
@@ -12,18 +11,19 @@ public class Block : StaticBody2D
 
     private AnimatedSprite animatedSprite;
     private string[] animationNames;
+    private AudioStreamPlayer hitAudio;
+    private AudioStreamPlayer destroyAudio;
 
     public override void _Ready() {
         animatedSprite = ((AnimatedSprite)GetNode("AnimatedSprite"));
+        hitAudio = ((AudioStreamPlayer)GetNode("HitAudio"));
+        destroyAudio = ((AudioStreamPlayer)GetNode("DestroyAudio"));
         loadAnimationNames();
         animatedSprite.Play(animationNames[durability]);
     }
 
-    public void Hit() {
-        if (wall) {
-            return;
-        }
-        
+    public void Hit() {       
+        hitAudio.Play();
         DecreaseDurability();
     }
 
@@ -32,11 +32,28 @@ public class Block : StaticBody2D
             animatedSprite.Play(animationNames[--durability]);
             EmitSignal(nameof(ScorePoints), points);
         } else {
-            QueueFree();
+            EmitSignal(nameof(ScorePoints), points);
+            
+            if (IsLastOneLeft()) {
+                GetTree().Paused = true;
+                ((Node2D)GetParent().GetNode("GameOverScreen")).Show();
+            }
+
+            destroyAudio.Play();
+            Hide();
+            ((CollisionShape2D)GetNode("CollisionShape2D")).Disabled = true;
         }
+    }
+
+    public void Die() {
+        QueueFree();
     }
 
     private void loadAnimationNames() {
         animationNames = animatedSprite.Frames.GetAnimationNames();
+    }
+
+    private bool IsLastOneLeft() {
+        return GetTree().GetNodesInGroup("Blocks").Count == 1;
     }
 }

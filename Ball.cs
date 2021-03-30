@@ -4,7 +4,7 @@ using System;
 public class Ball : KinematicBody2D
 {
     [Export]
-    public int speed = 500;
+    public int speed = 600;
 
     [Signal]
     public delegate void TakeDamage();
@@ -23,6 +23,7 @@ public class Ball : KinematicBody2D
 
         if (collision != null) {
             velocity = velocity.Bounce(collision.Normal);
+            ((AudioStreamPlayer)GetNode("HitAudio")).Play();
 
             if (collision.Collider.HasMethod("Hit")) {
                 collision.Collider.Call("Hit");
@@ -37,7 +38,8 @@ public class Ball : KinematicBody2D
     }
 
     public void BounceOfPaddle(Vector2 v) {
-        velocity += new Vector2(v.x, 0).Normalized() * speed;
+        velocity += new Vector2(v.x, 0);
+        velocity = velocity.Normalized() * speed;
     }
 
     public void ShiftToPaddle() {

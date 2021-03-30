@@ -3,78 +3,110 @@
 [ext_resource path="res://Ball.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Block.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Paddle.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/bg/IMG_20200618_100133.jpg" type="Texture" id=4]
+[ext_resource path="res://assets/bg/backgroundColorGrass.png" type="Texture" id=4]
 [ext_resource path="res://Score.tscn" type="PackedScene" id=5]
 [ext_resource path="res://LifeIndicator.tscn" type="PackedScene" id=6]
 [ext_resource path="res://GameOverScreen.tscn" type="PackedScene" id=7]
 
 [sub_resource type="SegmentShape2D" id=1]
-b = Vector2( 1334, 0 )
+b = Vector2( 430, 0 )
 
 [sub_resource type="SegmentShape2D" id=2]
-b = Vector2( 0, 750 )
+b = Vector2( 0, 720 )
 
 [sub_resource type="SegmentShape2D" id=3]
-a = Vector2( 1334, 0 )
-b = Vector2( 1334, 750 )
+a = Vector2( 430, 0 )
+b = Vector2( 430, 720 )
 
 [node name="Main" type="Node"]
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 668, 376 )
-scale = Vector2( 0.334, 0.334222 )
+position = Vector2( 384, 336 )
+scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 4 )
 
 [node name="Ball" parent="." instance=ExtResource( 1 )]
-position = Vector2( 692.264, 675.928 )
+position = Vector2( 248, 672 )
 
-[node name="Block" parent="." instance=ExtResource( 2 )]
-position = Vector2( 224, 368 )
+[node name="Block" parent="." groups=[
+"Blocks",
+] instance=ExtResource( 2 )]
+position = Vector2( 88, 80 )
 durability = 3
 
-[node name="Block2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 288, 368 )
+[node name="Block2" parent="." groups=[
+"Blocks",
+] instance=ExtResource( 2 )]
+position = Vector2( 152, 80 )
 durability = 3
 
-[node name="Block3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 352, 368 )
+[node name="Block3" parent="." groups=[
+"Blocks",
+] instance=ExtResource( 2 )]
+position = Vector2( 216, 80 )
 durability = 3
 
-[node name="Block4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 416, 368 )
+[node name="Block4" parent="." groups=[
+"Blocks",
+] instance=ExtResource( 2 )]
+position = Vector2( 280, 80 )
 durability = 3
 
-[node name="Block5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 480, 368 )
+[node name="Block5" parent="." groups=[
+"Blocks",
+] instance=ExtResource( 2 )]
+position = Vector2( 344, 80 )
 durability = 3
 
-[node name="Block6" parent="." instance=ExtResource( 2 )]
-position = Vector2( 544, 368 )
-durability = 3
+[node name="Block6" parent="." groups=[
+"Blocks",
+] instance=ExtResource( 2 )]
+position = Vector2( 88, 112 )
+durability = 2
 
-[node name="Block7" parent="." instance=ExtResource( 2 )]
-position = Vector2( 608, 368 )
-durability = 3
+[node name="Block7" parent="." groups=[
+"Blocks",
+] instance=ExtResource( 2 )]
+position = Vector2( 152, 112 )
+durability = 2
 
-[node name="Block8" parent="." instance=ExtResource( 2 )]
-position = Vector2( 672, 368 )
-durability = 3
+[node name="Block8" parent="." groups=[
+"Blocks",
+] instance=ExtResource( 2 )]
+position = Vector2( 216, 112 )
+durability = 2
 
-[node name="Block9" parent="." instance=ExtResource( 2 )]
-position = Vector2( 736, 368 )
-durability = 3
+[node name="Block9" parent="." groups=[
+"Blocks",
+] instance=ExtResource( 2 )]
+position = Vector2( 280, 112 )
+durability = 2
 
-[node name="Block10" parent="." instance=ExtResource( 2 )]
-position = Vector2( 800, 368 )
-durability = 3
+[node name="Block11" parent="." groups=[
+"Blocks",
+] instance=ExtResource( 2 )]
+position = Vector2( 120, 144 )
 
-[node name="Block11" parent="." instance=ExtResource( 2 )]
-position = Vector2( 864, 368 )
-durability = 3
+[node name="Block12" parent="." groups=[
+"Blocks",
+] instance=ExtResource( 2 )]
+position = Vector2( 184, 144 )
 
-[node name="Block12" parent="." instance=ExtResource( 2 )]
-position = Vector2( 928, 368 )
-durability = 3
+[node name="Block13" parent="." groups=[
+"Blocks",
+] instance=ExtResource( 2 )]
+position = Vector2( 248, 144 )
+
+[node name="Block14" parent="." groups=[
+"Blocks",
+] instance=ExtResource( 2 )]
+position = Vector2( 312, 144 )
+
+[node name="Block10" parent="." groups=[
+"Blocks",
+] instance=ExtResource( 2 )]
+position = Vector2( 344, 112 )
+durability = 2
 
 [node name="Wall" type="KinematicBody2D" parent="."]
 
@@ -92,20 +124,60 @@ shape = SubResource( 2 )
 shape = SubResource( 3 )
 
 [node name="Paddle" parent="." instance=ExtResource( 3 )]
-position = Vector2( 640, 736 )
+position = Vector2( 240, 704 )
 
 [node name="Score" parent="." instance=ExtResource( 5 )]
-margin_right = 1336.0
-margin_bottom = 64.0
+margin_right = 432.0
 
 [node name="LifeIndicator" parent="." instance=ExtResource( 6 )]
 position = Vector2( 32, 32 )
 scale = Vector2( 2, 2 )
 
 [node name="GameOverScreen" parent="." instance=ExtResource( 7 )]
+position = Vector2( 12, 224 )
+
+[node name="Block15" parent="." groups=[
+"Blocks",
+] instance=ExtResource( 2 )]
+position = Vector2( 120, 144 )
+
+[node name="Block16" parent="." groups=[
+"Blocks",
+] instance=ExtResource( 2 )]
+position = Vector2( 184, 144 )
+
+[node name="Block17" parent="." groups=[
+"Blocks",
+] instance=ExtResource( 2 )]
+position = Vector2( 248, 144 )
+
+[node name="Block18" parent="." groups=[
+"Blocks",
+] instance=ExtResource( 2 )]
+position = Vector2( 152, 176 )
+durability = 0
+
+[node name="Block19" parent="." groups=[
+"Blocks",
+] instance=ExtResource( 2 )]
+position = Vector2( 216, 176 )
+durability = 0
+
+[node name="Block20" parent="." groups=[
+"Blocks",
+] instance=ExtResource( 2 )]
+position = Vector2( 280, 176 )
+durability = 0
+
+[node name="Block24" parent="." groups=[
+"Blocks",
+] instance=ExtResource( 2 )]
+position = Vector2( 224, 624 )
+
+[node name="GameOverScreen2" parent="." instance=ExtResource( 7 )]
 visible = false
-position = Vector2( 432, 256 )
-[connection signal="TakeDamage" from="Ball" to="LifeIndicator" method="takeDamage"]
+position = Vector2( 12, 224 )
+[connection signal="TakeDamage" from="Ball" to="LifeIndicator" method="TakeDamage"]
 [connection signal="ScorePoints" from="Block" to="Score" method="IncreaseScore"]
 [connection signal="ScorePoints" from="Block2" to="Score" method="IncreaseScore"]
 [connection signal="ScorePoints" from="Block3" to="Score" method="IncreaseScore"]
@@ -115,6 +187,15 @@ position = Vector2( 432, 256 )
 [connection signal="ScorePoints" from="Block7" to="Score" method="IncreaseScore"]
 [connection signal="ScorePoints" from="Block8" to="Score" method="IncreaseScore"]
 [connection signal="ScorePoints" from="Block9" to="Score" method="IncreaseScore"]
-[connection signal="ScorePoints" from="Block10" to="Score" method="IncreaseScore"]
 [connection signal="ScorePoints" from="Block11" to="Score" method="IncreaseScore"]
 [connection signal="ScorePoints" from="Block12" to="Score" method="IncreaseScore"]
+[connection signal="ScorePoints" from="Block13" to="Score" method="IncreaseScore"]
+[connection signal="ScorePoints" from="Block14" to="Score" method="IncreaseScore"]
+[connection signal="ScorePoints" from="Block10" to="Score" method="IncreaseScore"]
+[connection signal="ScorePoints" from="Block15" to="Score" method="IncreaseScore"]
+[connection signal="ScorePoints" from="Block16" to="Score" method="IncreaseScore"]
+[connection signal="ScorePoints" from="Block17" to="Score" method="IncreaseScore"]
+[connection signal="ScorePoints" from="Block18" to="Score" method="IncreaseScore"]
+[connection signal="ScorePoints" from="Block19" to="Score" method="IncreaseScore"]
+[connection signal="ScorePoints" from="Block20" to="Score" method="IncreaseScore"]
+[connection signal="ScorePoints" from="Block24" to="Score" method="IncreaseScore"]
