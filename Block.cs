@@ -18,7 +18,7 @@ public class Block : StaticBody2D
         animatedSprite = ((AnimatedSprite)GetNode("AnimatedSprite"));
         hitAudio = ((AudioStreamPlayer)GetNode("HitAudio"));
         destroyAudio = ((AudioStreamPlayer)GetNode("DestroyAudio"));
-        loadAnimationNames();
+        LoadAnimationNames();
         animatedSprite.Play(animationNames[durability]);
     }
 
@@ -33,23 +33,30 @@ public class Block : StaticBody2D
             EmitSignal(nameof(ScorePoints), points);
         } else {
             EmitSignal(nameof(ScorePoints), points);
-            
-            if (IsLastOneLeft()) {
-                GetTree().Paused = true;
-                ((Node2D)GetParent().GetNode("GameOverScreen")).Show();
-            }
 
+            animatedSprite.Play("zbreak");
+            animatedSprite.Offset = new Vector2(0, 47);
             destroyAudio.Play();
-            Hide();
             ((CollisionShape2D)GetNode("CollisionShape2D")).Disabled = true;
         }
     }
 
+    public void HideShards() {
+        if (animatedSprite.Animation == "zbreak") {
+            Hide();
+        }
+    }
+
     public void Die() {
+        if (IsLastOneLeft()) {
+            GetTree().Paused = true;
+            ((Node2D)GetParent().GetNode("GameOverScreen")).Show();
+        }
+
         QueueFree();
     }
 
-    private void loadAnimationNames() {
+    private void LoadAnimationNames() {
         animationNames = animatedSprite.Frames.GetAnimationNames();
     }
 

@@ -136,21 +136,6 @@ scale = Vector2( 2, 2 )
 [node name="GameOverScreen" parent="." instance=ExtResource( 7 )]
 position = Vector2( 12, 224 )
 
-[node name="Block15" parent="." groups=[
-"Blocks",
-] instance=ExtResource( 2 )]
-position = Vector2( 120, 144 )
-
-[node name="Block16" parent="." groups=[
-"Blocks",
-] instance=ExtResource( 2 )]
-position = Vector2( 184, 144 )
-
-[node name="Block17" parent="." groups=[
-"Blocks",
-] instance=ExtResource( 2 )]
-position = Vector2( 248, 144 )
-
 [node name="Block18" parent="." groups=[
 "Blocks",
 ] instance=ExtResource( 2 )]
@@ -168,11 +153,6 @@ durability = 0
 ] instance=ExtResource( 2 )]
 position = Vector2( 280, 176 )
 durability = 0
-
-[node name="Block24" parent="." groups=[
-"Blocks",
-] instance=ExtResource( 2 )]
-position = Vector2( 224, 624 )
 
 [node name="GameOverScreen2" parent="." instance=ExtResource( 7 )]
 visible = false
@@ -192,10 +172,6 @@ position = Vector2( 12, 224 )
 [connection signal="ScorePoints" from="Block13" to="Score" method="IncreaseScore"]
 [connection signal="ScorePoints" from="Block14" to="Score" method="IncreaseScore"]
 [connection signal="ScorePoints" from="Block10" to="Score" method="IncreaseScore"]
-[connection signal="ScorePoints" from="Block15" to="Score" method="IncreaseScore"]
-[connection signal="ScorePoints" from="Block16" to="Score" method="IncreaseScore"]
-[connection signal="ScorePoints" from="Block17" to="Score" method="IncreaseScore"]
 [connection signal="ScorePoints" from="Block18" to="Score" method="IncreaseScore"]
 [connection signal="ScorePoints" from="Block19" to="Score" method="IncreaseScore"]
 [connection signal="ScorePoints" from="Block20" to="Score" method="IncreaseScore"]
-[connection signal="ScorePoints" from="Block24" to="Score" method="IncreaseScore"]
